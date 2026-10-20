@@ -1,3 +1,4 @@
+// CafeInfo — простий презентаційний компонент без пропсів і стану.
 import css from './CafeInfo.module.css';
 
 export default function CafeInfo() {

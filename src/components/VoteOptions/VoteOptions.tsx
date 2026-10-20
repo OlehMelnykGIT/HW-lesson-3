@@ -1,3 +1,4 @@
+// VoteOptions — кнопки голосування. Стану не має: лише викликає колбеки з пропсів.
 import css from './VoteOptions.module.css';
 import type { VoteType } from '../../types/votes';
 

@@ -1,16 +1,17 @@
-import css from './App.module.css';
-import { useState } from 'react';
-import CafeInfo from '../CafeInfo/CafeInfo';
-import VoteStats from '../VoteStats/VoteStats';
-import VoteOptions from '../VoteOptions/VoteOptions';
-import Notification from '../Notification/Notification';
-import type { Votes, VoteType } from '../../types/votes';
+import css from "./App.module.css";
+import { useState } from "react";
+import CafeInfo from "../CafeInfo/CafeInfo";
+import VoteStats from "../VoteStats/VoteStats";
+import VoteOptions from "../VoteOptions/VoteOptions";
+import Notification from "../Notification/Notification";
+import type { Votes, VoteType } from "../../types/votes";
+import Forms from "../forms/Forms";
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({ good: 0, neutral: 0, bad: 0 });
   const resetVotes = () => setVotes({ good: 0, neutral: 0, bad: 0 });
   const handleVote = (type: VoteType) =>
-    setVotes(prevVotes => ({ ...prevVotes, [type]: prevVotes[type] + 1 }));
+    setVotes((prevVotes) => ({ ...prevVotes, [type]: prevVotes[type] + 1 }));
 
   const totalVotes = votes.good + votes.neutral + votes.bad;
   const positiveRate =
@@ -33,6 +34,7 @@ export default function App() {
       ) : (
         <Notification />
       )}
+      <Forms />
     </div>
   );
 }

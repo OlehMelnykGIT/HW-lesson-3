@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 22px;
+  background-color: #0a66c2;
+  color: #fff;
+  border: 1px solid #0a66c2;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  min-width: 120px;
+}
+
+.button:hover {
+  background-color: #004182;
+  border-color: #003060;
+}
+
+.reset {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.reset:hover {
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
